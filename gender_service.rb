@@ -71,7 +71,7 @@ def get_top_gender es_client, clientId
 	end
 end
 
-def get_top_gender_time_window es_client, clientId, time_window = '7h'
+def get_top_gender_time_window es_client, clientId, time_window = '7d'
 	res = es_client.search index: GENDER_INDEX, size: 0, body: {
 		query: {
 			bool: {
